@@ -11,13 +11,13 @@ const GithubProvider = ({ children }) => {
   const [repos, setRepos] = useState(mockRepos);
   const [followers, setFollowers] = useState(mockFollowers);
   const [requests, setRequests] = useState(0);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setisLoading] = useState(false);
   //https://api.github.com/users/john-smilga/repos?per_page=100
   //https://api.github.com/users/john-smilga/followers
   const [error, setError] = useState({ show: false, msg: "" });
   const searchGithubUser = async (user) => {
     toggleError();
-    setLoading(true);
+    setisLoading(true);
     const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
       console.log(err)
     );
@@ -43,7 +43,7 @@ const GithubProvider = ({ children }) => {
       toggleError(true, "there is no user with that username");
     }
     chaeckRequests();
-    setLoading(false);
+    setisLoading(false);
   };
   const chaeckRequests = () => {
     axios(`${rootUrl}/rate_limit`).then(({ data }) => {
