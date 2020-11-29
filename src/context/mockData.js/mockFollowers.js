@@ -1,4 +1,4 @@
-[
+export default[
   {
     "login": "div-yansh",
     "id": 46793009,
