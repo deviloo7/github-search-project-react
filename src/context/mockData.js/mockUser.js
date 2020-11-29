@@ -1,4 +1,5 @@
-{
+export default[
+  {
   "login": "deviloo7",
   "id": 51024681,
   "node_id": "MDQ6VXNlcjUxMDI0Njgx",
@@ -32,3 +33,4 @@
   "created_at": "2019-05-25T13:36:06Z",
   "updated_at": "2020-11-21T10:40:36Z"
 }
+]
